@@ -1,0 +1,568 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	//font-size: 0.9em;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	//max-width: 1140px;
+}
+
+#inner-header,
+#inner-footer,
+#content {
+	max-width: 1240px;
+}
+#inner-content {
+	//@include zen-grid-item(12,1);
+	//@include zen-grid-background();
+}
+/*********************
+HEADER STYLES
+*********************/
+
+
+.header {
+
+}
+
+.nav-social {
+	@include zen-grid-item(10,3);
+}
+.social-header {
+	position: relative;
+	right:0;
+	top:0;
+	.social-menu {
+		margin-top: 0.5em;
+		li a .icon {
+			height: 1.75em;
+		}
+	}
+}
+
+.section-title{
+	margin-top: 11%;
+	@include zen-grid-item(8,4);
+}
+
+	#logo {
+		img {
+			width: 83%;
+			@media only screen and (min-width: 900px) {
+				width: 99%;
+			}
+		}
+	}
+
+.home {
+	#container {
+		height: 100%;
+		.header {
+			min-height: 100%;
+			height: auto;
+			//overflow: hidden;
+			#logo {
+				z-index: 0;
+				img {
+					width: 60%;
+				}
+			}	
+			.band-photo {
+				margin-top: 0;
+			}
+			.social-header {
+				margin-top: 0;
+			}	
+			.featured-video {
+				padding-right: 2%;
+			}
+		}
+	}
+	@media only screen and (min-width:800px) {
+		.header .band-photo {
+			margin-top: 3%;
+		}
+	}
+	@media only screen and (min-height: 600px) and (orientation: landscape) {
+		.header	{
+			#inner-header {
+				min-height: 600px;
+			}
+			.featured-video {
+				margin-top: 13%;
+			}
+		}
+	}
+	@media only screen and (min-height: 768px) and (orientation: landscape) {
+		.header	#inner-header {
+			min-height: 768px;
+		}
+	}
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+
+
+nav {
+
+}
+
+.nav {
+	display: inline-block;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	font-size: 0.7em;
+	@media only screen and (min-width: 900px) {
+		font-size: 0.8em;
+	}
+	z-index: 3;
+	
+
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+			padding:0.5em 1em 0.5em 0;
+			font-size: 1.25em;
+			br {
+				display: none;
+			}
+
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $cd-menu;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {
+			a {
+				padding-right: 0;
+			}
+		}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			display: block;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+.page-nav {}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	padding: 2em 0;
+	/*#inner-content {
+		font-size: 1em;
+	} */
+	#main {
+		@include zen-grid-item (8,1);
+	}
+}
+
+.category-blog {
+	/* First cat blog page layout */
+	/* first post as below: */
+	.post {
+		width: 49.7%;
+		padding: 0 1em;
+		height:16em;
+		margin: 1em 0;
+		.teaser-surround {
+			height:16em;
+			.entry-content {
+				height: 13.55em;			
+			}
+		}
+		&:first-child {
+			width: 100%;
+			height: auto;
+			.teaser-surround {
+				height: 16em;
+				.entry-content {
+					height: 13.95em;
+				}
+				/* featured image theming */
+				.featured-image {
+					height: 16em;
+					width: 60%;
+					float: left;
+				}
+				&.has-thumbnail {
+					.entry-content {
+						width: 40%;
+						height: 14.45em;
+					}
+					.article-footer {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.category-photos-videos,
+.category-photos,
+.category-videos {
+	.post {
+		margin: 1em 0;
+		.teaser-surround {
+			.entry-content {
+				
+			}
+			.featured-image {
+      	height: auto;
+				width: 60%;
+			}
+			&.has-thumbnail {
+				.entry-content,
+				.article-footer {
+					width: 40%;
+				}
+				.entry-content {
+					//height: 14.5em;
+				}
+			}
+		}
+		&.format-video {
+			.entry-content {
+				display: inline-block;
+			}
+		}
+	}
+	.format-image {
+		.entry-content {
+			p:nth-child(2),
+			p:nth-child(3) {
+				display: none;
+			}
+		}
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	//margin-top: 0.9em;
+	clear: none;
+	@include zen-grid-item(4,9);
+	.widget {
+		&:nth-child(2n+1) {
+			@include zen-grid-item(12,1);
+			clear: none;
+			float:none;
+		}
+		&:nth-child(2n+2) {
+			@include zen-grid-item(12,1);
+			clear: none;
+			float:none;
+		}
+	}
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+		&:first-child {
+			margin-top: 0;
+		}
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/******************************************************************
+GENERIC FORM STYLES
+******************************************************************/
+
+form.fm-form {
+	label {
+		font-weight: 700;
+	}
+	input[type="text"],
+	input[type="textarea"] {
+		background-color: #fff;
+		border: 1px solid $cd-dark-grey;
+		padding: 0.5em;
+	}
+	input[type="submit"] {
+		background-color: $button-color; //change to green?
+		padding: 0.5em;
+		float:none;
+		border: 0;
+		color: #fff;
+		@include border-radius(4px);
+		font-family: $serif;
+		font-variant: small-caps;
+		font-weight: 700;
+		font-size: 1.2em;
+		@include transition(all 0.3s);
+		&:active,
+		&:hover,
+		&:focus {
+			background-color: $button-hover;
+			@include transition(all 0.1s);
+		}
+
+	}
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	#inner-footer {
+		font-size: 0.8em;
+		.logo {
+			@include zen-grid-item(2,1);
+		}
+		.contact {
+			@include zen-grid-item(3,3);
+		}
+		.social {
+			clear: none;
+			@include zen-grid-item(4,6);
+		}
+		.album {
+			clear: none;
+			@include zen-grid-item(3,10);
+		}
+		@media only screen and (min-width:900px) {
+			font-size: 0.9em;
+			.social {
+				clear: none;
+				@include zen-grid-item(3,6);
+			}
+			.album {
+				clear: none;
+				@include zen-grid-item(3,9);
+			}
+		}
+	}
+}
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+

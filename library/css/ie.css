@@ -1,0 +1,1266 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+*/
+/* import mixins */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* line 27, ../scss/_mixins.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 29, ../scss/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 30, ../scss/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*********************
+TOOLS
+*********************/
+/* line 38, ../scss/_mixins.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 45, ../scss/_mixins.scss */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/* Color Dolor Colours */
+/* Color Dolor Colour Uses */
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/* Zen Grids */
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+@font-face {
+  font-family: 'goudy_old_styleregular';
+  src: url("../fonts/goudos-webfont.eot");
+  src: url("../fonts/goudos-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/goudos-webfont.woff") format("woff"), url("../fonts/goudos-webfont.ttf") format("truetype"), url("../fonts/goudos-webfont.svg#goudy_old_styleregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 143, ../scss/_mixins.scss */
+span.amp {
+  font-family: 'Goudy Old Style','goudy_old_styleregular',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/* line 149, ../scss/_mixins.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 150, ../scss/_mixins.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 151, ../scss/_mixins.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 155, ../scss/_mixins.scss */
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 161, ../scss/_mixins.scss */
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 167, ../scss/_mixins.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 173, ../scss/_mixins.scss */
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 179, ../scss/_mixins.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BUTTONS
+*********************/
+/* line 241, ../scss/_mixins.scss */
+.button, .button:visited {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #557a84;
+  border-top-color: #618b96;
+  border-left-color: #618b96;
+  padding: 4px 12px;
+  color: white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  border-radius: 4px;
+  background-color: #65919c;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#759ca6), to(#65919c));
+  background-image: -webkit-linear-gradient(top, #759ca6, #65919c);
+  background-image: -moz-linear-gradient(top, #759ca6, #65919c);
+  background-image: -o-linear-gradient(top, #759ca6, #65919c);
+  background-image: linear-gradient(to bottom, #759ca6, #65919c);
+}
+/* line 260, ../scss/_mixins.scss */
+.button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  color: white;
+  border: 1px solid #557a84;
+  border-top-color: #47666e;
+  border-left-color: #47666e;
+  background-color: #5b838d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#65919c), to(#5b838d));
+  background-image: -webkit-linear-gradient(top, #65919c, #5b838d);
+  background-image: -moz-linear-gradient(top, #65919c, #5b838d);
+  background-image: -o-linear-gradient(top, #65919c, #5b838d);
+  background-image: linear-gradient(to bottom, #65919c, #5b838d);
+}
+/* line 268, ../scss/_mixins.scss */
+.button:active, .button:visited:active {
+  background-color: #759ca6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#65919c), to(#759ca6));
+  background-image: -webkit-linear-gradient(top, #65919c, #759ca6);
+  background-image: -moz-linear-gradient(top, #65919c, #759ca6);
+  background-image: -o-linear-gradient(top, #65919c, #759ca6);
+  background-image: linear-gradient(to bottom, #65919c, #759ca6);
+}
+
+/* line 273, ../scss/_mixins.scss */
+.blue-button, .blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+/* line 279, ../scss/_mixins.scss */
+.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+/* line 283, ../scss/_mixins.scss */
+.blue-button:active, .blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 22, ../scss/_481up.scss */
+#inner-content {
+  float: left;
+  width: 83.33333%;
+  margin-left: 8.33333%;
+  margin-right: -91.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 34, ../scss/_481up.scss */
+.social-header .social-menu li {
+  padding-right: 0.5em;
+}
+/* line 37, ../scss/_481up.scss */
+.social-header .social-menu li a .icon {
+  height: 1.5em;
+}
+
+/* line 49, ../scss/_481up.scss */
+.section-title {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  padding-left: 5%;
+  font-size: 2.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  /* line 57, ../scss/_481up.scss */
+  .home #container {
+    height: 100%;
+  }
+  /* line 60, ../scss/_481up.scss */
+  .home .header {
+    min-height: 100%;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 600px) {
+  /* line 67, ../scss/_481up.scss */
+  .home .header #logo img {
+    width: 85%;
+  }
+  /* line 71, ../scss/_481up.scss */
+  .home .header .band-photo {
+    float: left;
+    width: 66.66667%;
+    margin-left: 16.66667%;
+    margin-right: -83.33333%;
+    padding-left: 1%;
+    padding-right: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 75, ../scss/_481up.scss */
+  .home.mean-container .mean-nav {
+    margin-top: 28%;
+  }
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 84, ../scss/_481up.scss */
+header nav {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: right;
+}
+
+/* line 88, ../scss/_481up.scss */
+.nav {
+  border-top: 1px solid #ccc;
+}
+/* line 90, ../scss/_481up.scss */
+.nav li {
+  text-align: left;
+}
+
+/* .menu is clearfixed inside mixins.scss */
+/* line 96, ../scss/_481up.scss */
+.menu {
+  /* end .menu ul */
+}
+/* line 97, ../scss/_481up.scss */
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 98, ../scss/_481up.scss */
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 99, ../scss/_481up.scss */
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 143, ../scss/_481up.scss */
+#content {
+  padding: 0.5em 0;
+}
+/* line 145, ../scss/_481up.scss */
+#content #inner-content {
+  font-size: 1em;
+}
+
+/* line 151, ../scss/_481up.scss */
+.page .contact-info {
+  float: left;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: -50%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 154, ../scss/_481up.scss */
+.page .contact-form {
+  float: left;
+  width: 50%;
+  margin-left: 50%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 157, ../scss/_481up.scss */
+.page #content.no-sidebar #main {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* line 164, ../scss/_481up.scss */
+.category-photos-videos .above-posts {
+  padding: 0 1.5%;
+  width: 100%;
+  text-align: right;
+}
+
+/* entry content */
+/* line 171, ../scss/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 175, ../scss/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 180, ../scss/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 185, ../scss/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 200, ../scss/_481up.scss */
+.sidebar .widget:nth-child(2n+1) {
+  clear: left;
+  float: left;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: -50%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 204, ../scss/_481up.scss */
+.sidebar .widget:nth-child(2n+2) {
+  float: left;
+  width: 50%;
+  margin-left: 50%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* line 218, ../scss/_481up.scss */
+.footer #inner-footer .logo img {
+  padding-top: 0.5em;
+}
+/* line 222, ../scss/_481up.scss */
+.footer #inner-footer .logo a {
+  color: #4c4c4c;
+}
+
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/* EVENTS */
+/* SINGLE EVENTS */
+/* line 243, ../scss/_481up.scss */
+.single-tribe_events #tribe-events-event-meta {
+  font-size: 1em;
+}
+
+/* EVENTS LIST */
+/* line 250, ../scss/_481up.scss */
+.events-archive .entry-title {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -66.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 254, ../scss/_481up.scss */
+.events-archive .start-date {
+  clear: none;
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 258, ../scss/_481up.scss */
+.events-archive .entry-title, .events-archive .start-date {
+  font-size: 1.25em;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 34, ../scss/_768up.scss */
+#inner-header,
+#inner-footer,
+#content {
+  max-width: 1240px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 50, ../scss/_768up.scss */
+.nav-social {
+  float: left;
+  width: 83.33333%;
+  margin-left: 16.66667%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 53, ../scss/_768up.scss */
+.social-header {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+/* line 57, ../scss/_768up.scss */
+.social-header .social-menu {
+  margin-top: 0.5em;
+}
+/* line 59, ../scss/_768up.scss */
+.social-header .social-menu li a .icon {
+  height: 1.75em;
+}
+
+/* line 65, ../scss/_768up.scss */
+.section-title {
+  margin-top: 11%;
+  float: left;
+  width: 66.66667%;
+  margin-left: 25%;
+  margin-right: -91.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 71, ../scss/_768up.scss */
+#logo img {
+  width: 83%;
+}
+@media only screen and (min-width: 900px) {
+  /* line 71, ../scss/_768up.scss */
+  #logo img {
+    width: 99%;
+  }
+}
+
+/* line 80, ../scss/_768up.scss */
+.home #container {
+  height: 100%;
+}
+/* line 82, ../scss/_768up.scss */
+.home #container .header {
+  min-height: 100%;
+  height: auto;
+}
+/* line 86, ../scss/_768up.scss */
+.home #container .header #logo {
+  z-index: 0;
+}
+/* line 88, ../scss/_768up.scss */
+.home #container .header #logo img {
+  width: 60%;
+}
+/* line 92, ../scss/_768up.scss */
+.home #container .header .band-photo {
+  margin-top: 0;
+}
+/* line 95, ../scss/_768up.scss */
+.home #container .header .social-header {
+  margin-top: 0;
+}
+/* line 98, ../scss/_768up.scss */
+.home #container .header .featured-video {
+  padding-right: 2%;
+}
+@media only screen and (min-width: 800px) {
+  /* line 104, ../scss/_768up.scss */
+  .home .header .band-photo {
+    margin-top: 3%;
+  }
+}
+@media only screen and (min-height: 600px) and (orientation: landscape) {
+  /* line 110, ../scss/_768up.scss */
+  .home .header #inner-header {
+    min-height: 600px;
+  }
+  /* line 113, ../scss/_768up.scss */
+  .home .header .featured-video {
+    margin-top: 13%;
+  }
+}
+@media only screen and (min-height: 768px) and (orientation: landscape) {
+  /* line 119, ../scss/_768up.scss */
+  .home .header #inner-header {
+    min-height: 768px;
+  }
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 133, ../scss/_768up.scss */
+.nav {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  font-size: 0.7em;
+  z-index: 3;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+@media only screen and (min-width: 900px) {
+  /* line 133, ../scss/_768up.scss */
+  .nav {
+    font-size: 0.8em;
+  }
+}
+/* line 144, ../scss/_768up.scss */
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 148, ../scss/_768up.scss */
+.nav li a {
+  border-bottom: 0;
+  padding: 0.5em 1em 0.5em 0;
+  font-size: 1.25em;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+/* line 152, ../scss/_768up.scss */
+.nav li a br {
+  display: none;
+}
+/* line 161, ../scss/_768up.scss */
+.nav li a:hover, .nav li a:focus {
+  color: #9f3a5e;
+}
+/* line 168, ../scss/_768up.scss */
+.nav li:last-child a {
+  padding-right: 0;
+}
+/* line 177, ../scss/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+/* line 185, ../scss/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+/* line 187, ../scss/_768up.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 204, ../scss/_768up.scss */
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+/* line 226, ../scss/_768up.scss */
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+
+/* end .nav */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 248, ../scss/_768up.scss */
+#content {
+  padding: 2em 0;
+  /*#inner-content {
+  	font-size: 1em;
+  } */
+}
+/* line 253, ../scss/_768up.scss */
+#content #main {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -66.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 258, ../scss/_768up.scss */
+.category-blog {
+  /* First cat blog page layout */
+  /* first post as below: */
+}
+/* line 261, ../scss/_768up.scss */
+.category-blog .post {
+  width: 49.7%;
+  padding: 0 1em;
+  height: 16em;
+  margin: 1em 0;
+}
+/* line 266, ../scss/_768up.scss */
+.category-blog .post .teaser-surround {
+  height: 16em;
+}
+/* line 268, ../scss/_768up.scss */
+.category-blog .post .teaser-surround .entry-content {
+  height: 13.55em;
+}
+/* line 272, ../scss/_768up.scss */
+.category-blog .post:first-child {
+  width: 100%;
+  height: auto;
+}
+/* line 275, ../scss/_768up.scss */
+.category-blog .post:first-child .teaser-surround {
+  height: 16em;
+  /* featured image theming */
+}
+/* line 277, ../scss/_768up.scss */
+.category-blog .post:first-child .teaser-surround .entry-content {
+  height: 13.95em;
+}
+/* line 281, ../scss/_768up.scss */
+.category-blog .post:first-child .teaser-surround .featured-image {
+  height: 16em;
+  width: 60%;
+  float: left;
+}
+/* line 287, ../scss/_768up.scss */
+.category-blog .post:first-child .teaser-surround.has-thumbnail .entry-content {
+  width: 40%;
+  height: 14.45em;
+}
+/* line 291, ../scss/_768up.scss */
+.category-blog .post:first-child .teaser-surround.has-thumbnail .article-footer {
+  width: 100%;
+}
+
+/* line 302, ../scss/_768up.scss */
+.category-photos-videos .post,
+.category-photos .post,
+.category-videos .post {
+  margin: 1em 0;
+}
+/* line 308, ../scss/_768up.scss */
+.category-photos-videos .post .teaser-surround .featured-image,
+.category-photos .post .teaser-surround .featured-image,
+.category-videos .post .teaser-surround .featured-image {
+  height: auto;
+  width: 60%;
+}
+/* line 314, ../scss/_768up.scss */
+.category-photos-videos .post .teaser-surround.has-thumbnail .entry-content,
+.category-photos-videos .post .teaser-surround.has-thumbnail .article-footer,
+.category-photos .post .teaser-surround.has-thumbnail .entry-content,
+.category-photos .post .teaser-surround.has-thumbnail .article-footer,
+.category-videos .post .teaser-surround.has-thumbnail .entry-content,
+.category-videos .post .teaser-surround.has-thumbnail .article-footer {
+  width: 40%;
+}
+/* line 323, ../scss/_768up.scss */
+.category-photos-videos .post.format-video .entry-content,
+.category-photos .post.format-video .entry-content,
+.category-videos .post.format-video .entry-content {
+  display: inline-block;
+}
+/* line 331, ../scss/_768up.scss */
+.category-photos-videos .format-image .entry-content p:nth-child(2),
+.category-photos-videos .format-image .entry-content p:nth-child(3),
+.category-photos .format-image .entry-content p:nth-child(2),
+.category-photos .format-image .entry-content p:nth-child(3),
+.category-videos .format-image .entry-content p:nth-child(2),
+.category-videos .format-image .entry-content p:nth-child(3) {
+  display: none;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 342, ../scss/_768up.scss */
+.sidebar {
+  clear: none;
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 347, ../scss/_768up.scss */
+.sidebar .widget:nth-child(2n+1) {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  clear: none;
+  float: none;
+}
+/* line 352, ../scss/_768up.scss */
+.sidebar .widget:nth-child(2n+2) {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  clear: none;
+  float: none;
+}
+
+/* line 360, ../scss/_768up.scss */
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+/* line 365, ../scss/_768up.scss */
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+/* line 368, ../scss/_768up.scss */
+.widget:first-child {
+  margin-top: 0;
+}
+/* line 373, ../scss/_768up.scss */
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+/* line 381, ../scss/_768up.scss */
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/******************************************************************
+GENERIC FORM STYLES
+******************************************************************/
+/* line 483, ../scss/_768up.scss */
+form.fm-form label {
+  font-weight: 700;
+}
+/* line 487, ../scss/_768up.scss */
+form.fm-form input[type="text"],
+form.fm-form input[type="textarea"] {
+  background-color: #fff;
+  border: 1px solid #4c4c4c;
+  padding: 0.5em;
+}
+/* line 492, ../scss/_768up.scss */
+form.fm-form input[type="submit"] {
+  background-color: #9f3a5e;
+  padding: 0.5em;
+  float: none;
+  border: 0;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Goudy Old Style", "goudy_old_styleregular", "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 1.2em;
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 506, ../scss/_768up.scss */
+form.fm-form input[type="submit"]:active, form.fm-form input[type="submit"]:hover, form.fm-form input[type="submit"]:focus {
+  background-color: #bd4a73;
+  -webkit-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* line 519, ../scss/_768up.scss */
+.footer #inner-footer {
+  font-size: 0.8em;
+}
+/* line 521, ../scss/_768up.scss */
+.footer #inner-footer .logo {
+  float: left;
+  width: 16.66667%;
+  margin-left: 0%;
+  margin-right: -16.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 524, ../scss/_768up.scss */
+.footer #inner-footer .contact {
+  float: left;
+  width: 25%;
+  margin-left: 16.66667%;
+  margin-right: -41.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 527, ../scss/_768up.scss */
+.footer #inner-footer .social {
+  clear: none;
+  float: left;
+  width: 33.33333%;
+  margin-left: 41.66667%;
+  margin-right: -75%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 531, ../scss/_768up.scss */
+.footer #inner-footer .album {
+  clear: none;
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+@media only screen and (min-width: 900px) {
+  /* line 519, ../scss/_768up.scss */
+  .footer #inner-footer {
+    font-size: 0.9em;
+  }
+  /* line 537, ../scss/_768up.scss */
+  .footer #inner-footer .social {
+    clear: none;
+    float: left;
+    width: 25%;
+    margin-left: 41.66667%;
+    margin-right: -66.66667%;
+    padding-left: 1%;
+    padding-right: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 541, ../scss/_768up.scss */
+  .footer #inner-footer .album {
+    clear: none;
+    float: left;
+    width: 25%;
+    margin-left: 66.66667%;
+    margin-right: -91.66667%;
+    padding-left: 1%;
+    padding-right: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+}
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 555, ../scss/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/* line 12, ../scss/_1030up.scss */
+body {
+  font-size: 1em;
+}
+
+/* header */
+/* line 22, ../scss/_1030up.scss */
+#logo img {
+  width: 93%;
+}
+
+/* line 26, ../scss/_1030up.scss */
+.social-header .social-menu li a .icon {
+  height: 2em;
+}
+
+/* Navigation */
+@media only screen and (min-width: 1100px) {
+  /* line 32, ../scss/_1030up.scss */
+  header nav br {
+    display: none;
+  }
+  /* line 36, ../scss/_1030up.scss */
+  header nav .nav li {
+    text-align: left;
+  }
+}
+/* line 41, ../scss/_1030up.scss */
+header nav .nav {
+  font-size: 1em;
+}
+
+/* line 50, ../scss/_1030up.scss */
+.home #inner-header,
+.home #inner-footer,
+.home #content {
+  max-width: 1500px;
+}
+
+/* FOOTER */
+/* line 57, ../scss/_1030up.scss */
+.footer #inner-footer {
+  font-size: 1em;
+}
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
