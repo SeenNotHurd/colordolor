@@ -120,22 +120,22 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 	<div class="tribe-events-nav-previous"><?php 
 		// Display Previous Page Navigation
 		if( tribe_is_upcoming() && get_previous_posts_link() ) : ?>
-			<?php previous_posts_link( '<span>'.__('&laquo; Previous Events', 'tribe-events-calendar').'</span>' ); ?>
+			<?php previous_posts_link( '<span>'.__('&laquo; Earlier Shows', 'tribe-events-calendar').'</span>' ); ?>
 		<?php elseif( tribe_is_upcoming() && !get_previous_posts_link( ) ) : ?>
-			<a href='<?php echo tribe_get_past_link(); ?>'><span><?php _e('&laquo; Previous Events', 'tribe-events-calendar' ); ?></span></a>
+			<a href='<?php echo tribe_get_past_link(); ?>'><span><?php _e('&laquo; Earlier Shows', 'tribe-events-calendar' ); ?></span></a>
 		<?php elseif( tribe_is_past() && get_next_posts_link( ) ) : ?>
-			<?php next_posts_link( '<span>'.__('&laquo; Previous Events', 'tribe-events-calendar').'</span>' ); ?>
+			<?php next_posts_link( '<span>'.__('&laquo; Earlier Shows', 'tribe-events-calendar').'</span>' ); ?>
 		<?php endif; ?>
 		</div>
 
 		<div class="tribe-events-nav-next"><?php
 		// Display Next Page Navigation
 		if( tribe_is_upcoming() && get_next_posts_link( ) ) : ?>
-			<?php next_posts_link( '<span>'.__('Next Events &raquo;', 'tribe-events-calendar').'</span>' ); ?>
+			<?php next_posts_link( '<span>'.__('Later Shows &raquo;', 'tribe-events-calendar').'</span>' ); ?>
 		<?php elseif( tribe_is_past() && get_previous_posts_link( ) ) : ?>
-			<?php previous_posts_link( '<span>'.__('Next Events &raquo;', 'tribe-events-calendar').'</span>' ); // a little confusing but in 'past view' to see newer events you want the previous page ?>
+			<?php previous_posts_link( '<span>'.__('Later Shows &raquo;', 'tribe-events-calendar').'</span>' ); // a little confusing but in 'past view' to see newer events you want the previous page ?>
 		<?php elseif( tribe_is_past() && !get_previous_posts_link( ) ) : ?>
-			<a href='<?php echo tribe_get_upcoming_link(); ?>'><span><?php _e('Next Events &raquo;', 'tribe-events-calendar'); ?></span></a>
+			<a href='<?php echo tribe_get_upcoming_link(); ?>'><span><?php _e('Later Shows &raquo;', 'tribe-events-calendar'); ?></span></a>
 		<?php endif; ?>
 		</div>
 	<?php if ( !empty($hasPosts) && function_exists('tribe_get_ical_link') ): ?>
