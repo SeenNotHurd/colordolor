@@ -86,39 +86,32 @@
 
 					<h1 class="section-title">
 					<?php 
-						if(is_category()) { 
-							$headerTitle = single_cat_title(); 
-							// if($headerTitle == '') {
-							//   echo 'Live Shows';
-							// } else {
-							// 	echo $headerTitle;
-							// }
-							
+						if(is_single () && !is_category()) {
+              if(has_post_format( 'video' )) {
+  							$headerTitle = 'Videos';
+  						} elseif (has_post_format( 'gallery' )) {
+  							$headerTitle = 'Photos';
+  						} elseif (false != get_post_format()) {
+                $headerTitle = 'Blog';
+              }
+            } elseif(is_category()) { 
+  						$headerTitle = single_cat_title();
 						} elseif(is_page() && !tribe_is_event()) {
 							$headerTitle = get_the_title();
 							if($headerTitle == '') {
-							  echo 'Live Shows';
-							} else {
-								echo $headerTitle;
+							  $headerTitle = 'Live Shows';
 							}
-							
 						} elseif(is_single($post->ID) && !tribe_is_event()) {
 							$category = get_the_category(); 
 						  $headerTitle = $category[0]->cat_name;
 							if($headerTitle == '') {
-							  echo 'Live Shows';
-							} else {
-								echo $headerTitle;
+							  $headerTitle = 'Live Shows';
 							}
-						} elseif(tribe_is_event() /*|| /*tribe_is_event() || tribe_is_list_view() /*empty($hasPosts)*/) {
+						} elseif (tribe_is_event() /*|| /*tribe_is_event() || tribe_is_list_view() /*empty($hasPosts)*/) {
 						 	$headerTitle = 'Live Shows';
-						 	echo $headerTitle;
-						} 
-
-							?>
-						<?php
-
-					?>
+						}
+            echo $headerTitle; 
+            ?>
 					</h1>
 
 					<?php endif; ?>

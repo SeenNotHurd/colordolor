@@ -266,7 +266,15 @@ POSTS & CONTENT STYLES
 		.teaser-surround {
 			height:16em;
 			.entry-content {
-				height: 13.55em;			
+				height: 13.5em;			
+			}
+			.featured-image {
+				height: 7em;
+			}
+			&.has-thumbnail {
+				.entry-content {
+					height: 7.9em;		
+				}
 			}
 		}
 		&:first-child {
@@ -295,12 +303,28 @@ POSTS & CONTENT STYLES
 			}
 		}
 	}
+  .post {
+    &.format-gallery {
+      &:first-child {
+        .entry-content {
+          height: auto;
+        }
+        .teaser-surround {
+          height: auto;
+        }
+      }
+    }
+  }
 }
 .category-photos-videos,
 .category-photos,
 .category-videos {
 	.post {
 		margin: 1em 0;
+    padding: 0 1em;
+    &:first-child {
+      margin-top: 0.5em;
+    }
 		.teaser-surround {
 			.entry-content {
 				

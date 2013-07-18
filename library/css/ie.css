@@ -865,52 +865,75 @@ POSTS & CONTENT STYLES
 }
 /* line 268, ../scss/_768up.scss */
 .category-blog .post .teaser-surround .entry-content {
-  height: 13.55em;
+  height: 13.5em;
 }
-/* line 272, ../scss/_768up.scss */
+/* line 271, ../scss/_768up.scss */
+.category-blog .post .teaser-surround .featured-image {
+  height: 7em;
+}
+/* line 275, ../scss/_768up.scss */
+.category-blog .post .teaser-surround.has-thumbnail .entry-content {
+  height: 7.9em;
+}
+/* line 280, ../scss/_768up.scss */
 .category-blog .post:first-child {
   width: 100%;
   height: auto;
 }
-/* line 275, ../scss/_768up.scss */
+/* line 283, ../scss/_768up.scss */
 .category-blog .post:first-child .teaser-surround {
   height: 16em;
   /* featured image theming */
 }
-/* line 277, ../scss/_768up.scss */
+/* line 285, ../scss/_768up.scss */
 .category-blog .post:first-child .teaser-surround .entry-content {
   height: 13.95em;
 }
-/* line 281, ../scss/_768up.scss */
+/* line 289, ../scss/_768up.scss */
 .category-blog .post:first-child .teaser-surround .featured-image {
   height: 16em;
   width: 60%;
   float: left;
 }
-/* line 287, ../scss/_768up.scss */
+/* line 295, ../scss/_768up.scss */
 .category-blog .post:first-child .teaser-surround.has-thumbnail .entry-content {
   width: 40%;
   height: 14.45em;
 }
-/* line 291, ../scss/_768up.scss */
+/* line 299, ../scss/_768up.scss */
 .category-blog .post:first-child .teaser-surround.has-thumbnail .article-footer {
   width: 100%;
 }
+/* line 309, ../scss/_768up.scss */
+.category-blog .post.format-gallery:first-child .entry-content {
+  height: auto;
+}
+/* line 312, ../scss/_768up.scss */
+.category-blog .post.format-gallery:first-child .teaser-surround {
+  height: auto;
+}
 
-/* line 302, ../scss/_768up.scss */
+/* line 322, ../scss/_768up.scss */
 .category-photos-videos .post,
 .category-photos .post,
 .category-videos .post {
   margin: 1em 0;
+  padding: 0 1em;
 }
-/* line 308, ../scss/_768up.scss */
+/* line 325, ../scss/_768up.scss */
+.category-photos-videos .post:first-child,
+.category-photos .post:first-child,
+.category-videos .post:first-child {
+  margin-top: 0.5em;
+}
+/* line 332, ../scss/_768up.scss */
 .category-photos-videos .post .teaser-surround .featured-image,
 .category-photos .post .teaser-surround .featured-image,
 .category-videos .post .teaser-surround .featured-image {
   height: auto;
   width: 60%;
 }
-/* line 314, ../scss/_768up.scss */
+/* line 338, ../scss/_768up.scss */
 .category-photos-videos .post .teaser-surround.has-thumbnail .entry-content,
 .category-photos-videos .post .teaser-surround.has-thumbnail .article-footer,
 .category-photos .post .teaser-surround.has-thumbnail .entry-content,
@@ -919,13 +942,13 @@ POSTS & CONTENT STYLES
 .category-videos .post .teaser-surround.has-thumbnail .article-footer {
   width: 40%;
 }
-/* line 323, ../scss/_768up.scss */
+/* line 347, ../scss/_768up.scss */
 .category-photos-videos .post.format-video .entry-content,
 .category-photos .post.format-video .entry-content,
 .category-videos .post.format-video .entry-content {
   display: inline-block;
 }
-/* line 331, ../scss/_768up.scss */
+/* line 355, ../scss/_768up.scss */
 .category-photos-videos .format-gallery .entry-content p:nth-child(2),
 .category-photos-videos .format-gallery .entry-content p:nth-child(3),
 .category-photos .format-gallery .entry-content p:nth-child(2),
@@ -938,7 +961,7 @@ POSTS & CONTENT STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 342, ../scss/_768up.scss */
+/* line 366, ../scss/_768up.scss */
 .sidebar {
   clear: none;
   float: left;
@@ -953,7 +976,7 @@ SIDEBARS & ASIDES
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 347, ../scss/_768up.scss */
+/* line 371, ../scss/_768up.scss */
 .sidebar .widget:nth-child(2n+1) {
   float: left;
   width: 100%;
@@ -969,7 +992,7 @@ SIDEBARS & ASIDES
   clear: none;
   float: none;
 }
-/* line 352, ../scss/_768up.scss */
+/* line 376, ../scss/_768up.scss */
 .sidebar .widget:nth-child(2n+2) {
   float: left;
   width: 100%;
@@ -986,27 +1009,27 @@ SIDEBARS & ASIDES
   float: none;
 }
 
-/* line 360, ../scss/_768up.scss */
+/* line 384, ../scss/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 365, ../scss/_768up.scss */
+/* line 389, ../scss/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 368, ../scss/_768up.scss */
+/* line 392, ../scss/_768up.scss */
 .widget:first-child {
   margin-top: 0;
 }
-/* line 373, ../scss/_768up.scss */
+/* line 397, ../scss/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 381, ../scss/_768up.scss */
+/* line 405, ../scss/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -1026,18 +1049,18 @@ SIDEBARS & ASIDES
 /******************************************************************
 GENERIC FORM STYLES
 ******************************************************************/
-/* line 483, ../scss/_768up.scss */
+/* line 507, ../scss/_768up.scss */
 form.fm-form label {
   font-weight: 700;
 }
-/* line 487, ../scss/_768up.scss */
+/* line 511, ../scss/_768up.scss */
 form.fm-form input[type="text"],
 form.fm-form input[type="textarea"] {
   background-color: #fff;
   border: 1px solid #4c4c4c;
   padding: 0.5em;
 }
-/* line 492, ../scss/_768up.scss */
+/* line 516, ../scss/_768up.scss */
 form.fm-form input[type="submit"] {
   background-color: #9f3a5e;
   padding: 0.5em;
@@ -1059,7 +1082,7 @@ form.fm-form input[type="submit"] {
   -transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 506, ../scss/_768up.scss */
+/* line 530, ../scss/_768up.scss */
 form.fm-form input[type="submit"]:active, form.fm-form input[type="submit"]:hover, form.fm-form input[type="submit"]:focus {
   background-color: #bd4a73;
   -webkit-transition: all 0.1s;
@@ -1072,11 +1095,11 @@ form.fm-form input[type="submit"]:active, form.fm-form input[type="submit"]:hove
 /*********************
 FOOTER STYLES
 *********************/
-/* line 519, ../scss/_768up.scss */
+/* line 543, ../scss/_768up.scss */
 .footer #inner-footer {
   font-size: 0.8em;
 }
-/* line 521, ../scss/_768up.scss */
+/* line 545, ../scss/_768up.scss */
 .footer #inner-footer .logo {
   float: left;
   width: 16.66667%;
@@ -1090,7 +1113,7 @@ FOOTER STYLES
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 524, ../scss/_768up.scss */
+/* line 548, ../scss/_768up.scss */
 .footer #inner-footer .contact {
   float: left;
   width: 25%;
@@ -1104,7 +1127,7 @@ FOOTER STYLES
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 527, ../scss/_768up.scss */
+/* line 551, ../scss/_768up.scss */
 .footer #inner-footer .social {
   clear: none;
   float: left;
@@ -1119,7 +1142,7 @@ FOOTER STYLES
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 531, ../scss/_768up.scss */
+/* line 555, ../scss/_768up.scss */
 .footer #inner-footer .album {
   clear: none;
   float: left;
@@ -1135,11 +1158,11 @@ FOOTER STYLES
   word-wrap: break-word;
 }
 @media only screen and (min-width: 900px) {
-  /* line 519, ../scss/_768up.scss */
+  /* line 543, ../scss/_768up.scss */
   .footer #inner-footer {
     font-size: 0.9em;
   }
-  /* line 537, ../scss/_768up.scss */
+  /* line 561, ../scss/_768up.scss */
   .footer #inner-footer .social {
     clear: none;
     float: left;
@@ -1154,7 +1177,7 @@ FOOTER STYLES
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 541, ../scss/_768up.scss */
+  /* line 565, ../scss/_768up.scss */
   .footer #inner-footer .album {
     clear: none;
     float: left;
@@ -1176,7 +1199,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 555, ../scss/_768up.scss */
+/* line 579, ../scss/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
