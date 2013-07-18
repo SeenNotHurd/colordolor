@@ -1,8 +1,7 @@
-  <?php
-    $custom_fields = get_post_custom();
-    $galleryCaptions = isset($custom_fields['captions']) ? 'no-captions': 'captions';
-
-  ?> 
+<?php
+  $custom_fields = get_post_custom();
+  $galleryCaptions = isset($custom_fields['captions']) ? 'no-captions': 'captions';
+?> 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix ' . $galleryCaptions); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 

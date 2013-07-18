@@ -1659,12 +1659,12 @@ POSTS & CONTENT STYLES
 
 /* general post style */
 /* line 539, ../scss/_base.scss */
-.format-image .entry-content p:nth-child(1),
-.format-image .entry-content p:nth-child(2) {
+.format-gallery .entry-content p:nth-child(1),
+.format-gallery .entry-content p:nth-child(2) {
   display: none;
 }
 /* line 545, ../scss/_base.scss */
-.format-image.no-captions .gallery-item .gallery-caption {
+.format-gallery.no-captions .gallery-item .gallery-caption {
   display: none;
 }
 
@@ -2024,54 +2024,54 @@ POSTS & CONTENT STYLES
   width: 100%;
 }
 /* line 771, ../scss/_base.scss */
-.category-photos-videos .post.format-image .gallery + p,
-.category-photos .post.format-image .gallery + p,
-.category-videos .post.format-image .gallery + p {
+.category-photos-videos .post.format-gallery .gallery + p,
+.category-photos .post.format-gallery .gallery + p,
+.category-videos .post.format-gallery .gallery + p {
   display: none;
 }
 /* line 774, ../scss/_base.scss */
-.category-photos-videos .post.format-image .gallery > p,
-.category-photos .post.format-image .gallery > p,
-.category-videos .post.format-image .gallery > p {
+.category-photos-videos .post.format-gallery .gallery > p,
+.category-photos .post.format-gallery .gallery > p,
+.category-videos .post.format-gallery .gallery > p {
   display: none;
 }
 /* line 777, ../scss/_base.scss */
-.category-photos-videos .post.format-image .gallery dd,
-.category-photos .post.format-image .gallery dd,
-.category-videos .post.format-image .gallery dd {
+.category-photos-videos .post.format-gallery .gallery dd,
+.category-photos .post.format-gallery .gallery dd,
+.category-videos .post.format-gallery .gallery dd {
   margin-bottom: 0.5em;
 }
 /* line 780, ../scss/_base.scss */
-.category-photos-videos .post.format-image .gallery-item:nth-child(n+5),
-.category-photos .post.format-image .gallery-item:nth-child(n+5),
-.category-videos .post.format-image .gallery-item:nth-child(n+5) {
+.category-photos-videos .post.format-gallery .gallery-item:nth-child(n+5),
+.category-photos .post.format-gallery .gallery-item:nth-child(n+5),
+.category-videos .post.format-gallery .gallery-item:nth-child(n+5) {
   display: none;
 }
 /* line 783, ../scss/_base.scss */
-.category-photos-videos .post.format-image .article-footer,
-.category-photos .post.format-image .article-footer,
-.category-videos .post.format-image .article-footer {
+.category-photos-videos .post.format-gallery .article-footer,
+.category-photos .post.format-gallery .article-footer,
+.category-videos .post.format-gallery .article-footer {
   text-align: right;
 }
 /* line 786, ../scss/_base.scss */
-.category-photos-videos .post.format-image .teaser-surround,
-.category-photos .post.format-image .teaser-surround,
-.category-videos .post.format-image .teaser-surround {
+.category-photos-videos .post.format-gallery .teaser-surround,
+.category-photos .post.format-gallery .teaser-surround,
+.category-videos .post.format-gallery .teaser-surround {
   padding-bottom: 2em;
 }
 /* line 791, ../scss/_base.scss */
-.category-photos-videos .post.format-image.no-captions .gallery-item .gallery-caption,
-.category-photos .post.format-image.no-captions .gallery-item .gallery-caption,
-.category-videos .post.format-image.no-captions .gallery-item .gallery-caption {
+.category-photos-videos .post.format-gallery.no-captions .gallery-item .gallery-caption,
+.category-photos .post.format-gallery.no-captions .gallery-item .gallery-caption,
+.category-videos .post.format-gallery.no-captions .gallery-item .gallery-caption {
   display: none;
 }
 /* line 798, ../scss/_base.scss */
-.category-photos-videos .post.format-image .entry-content p:nth-child(2),
-.category-photos-videos .post.format-image .entry-content p:nth-child(3),
-.category-photos .post.format-image .entry-content p:nth-child(2),
-.category-photos .post.format-image .entry-content p:nth-child(3),
-.category-videos .post.format-image .entry-content p:nth-child(2),
-.category-videos .post.format-image .entry-content p:nth-child(3) {
+.category-photos-videos .post.format-gallery .entry-content p:nth-child(2),
+.category-photos-videos .post.format-gallery .entry-content p:nth-child(3),
+.category-photos .post.format-gallery .entry-content p:nth-child(2),
+.category-photos .post.format-gallery .entry-content p:nth-child(3),
+.category-videos .post.format-gallery .entry-content p:nth-child(2),
+.category-videos .post.format-gallery .entry-content p:nth-child(3) {
   display: none;
 }
 /* line 814, ../scss/_base.scss */
@@ -3651,12 +3651,12 @@ you can add resource intensive styles.
     display: inline-block;
   }
   /* line 331, ../scss/_768up.scss */
-  .category-photos-videos .format-image .entry-content p:nth-child(2),
-  .category-photos-videos .format-image .entry-content p:nth-child(3),
-  .category-photos .format-image .entry-content p:nth-child(2),
-  .category-photos .format-image .entry-content p:nth-child(3),
-  .category-videos .format-image .entry-content p:nth-child(2),
-  .category-videos .format-image .entry-content p:nth-child(3) {
+  .category-photos-videos .format-gallery .entry-content p:nth-child(2),
+  .category-photos-videos .format-gallery .entry-content p:nth-child(3),
+  .category-photos .format-gallery .entry-content p:nth-child(2),
+  .category-photos .format-gallery .entry-content p:nth-child(3),
+  .category-videos .format-gallery .entry-content p:nth-child(2),
+  .category-videos .format-gallery .entry-content p:nth-child(3) {
     display: none;
   }
 

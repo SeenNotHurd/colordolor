@@ -926,12 +926,12 @@ POSTS & CONTENT STYLES
   display: inline-block;
 }
 /* line 331, ../scss/_768up.scss */
-.category-photos-videos .format-image .entry-content p:nth-child(2),
-.category-photos-videos .format-image .entry-content p:nth-child(3),
-.category-photos .format-image .entry-content p:nth-child(2),
-.category-photos .format-image .entry-content p:nth-child(3),
-.category-videos .format-image .entry-content p:nth-child(2),
-.category-videos .format-image .entry-content p:nth-child(3) {
+.category-photos-videos .format-gallery .entry-content p:nth-child(2),
+.category-photos-videos .format-gallery .entry-content p:nth-child(3),
+.category-photos .format-gallery .entry-content p:nth-child(2),
+.category-photos .format-gallery .entry-content p:nth-child(3),
+.category-videos .format-gallery .entry-content p:nth-child(2),
+.category-videos .format-gallery .entry-content p:nth-child(3) {
   display: none;
 }
 

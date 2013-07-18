@@ -208,7 +208,7 @@ function bones_theme_support() {
 			//'aside',             // title less blurb
 			'gallery',           // gallery of images
 			//'link',              // quick link to other site
-			'image',             // an image
+			//'image',             // an image
 			//'quote',             // a quick quote
 			//'status',            // a Facebook like status update
 			'video',             // video

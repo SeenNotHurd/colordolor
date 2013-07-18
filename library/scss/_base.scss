@@ -532,7 +532,7 @@ POSTS & CONTENT STYLES
 			}
 		}            /* general post style */
 
-		.format-image {
+		.format-gallery {
 			//display: none;
 			.entry-content {
 				p:nth-child(1),
@@ -728,16 +728,16 @@ POSTS & CONTENT STYLES
           .entry-content {
             padding: 0 1em;
             height: auto;
-						overflow: hidden;
-						header {
-							.entry-title {
-								color: $cd-black;
-								//display:none;
-							}
-							a:hover .entry-title {
-								opacity: 0.7;
-							}
-						}
+			overflow: hidden;
+			header {
+				.entry-title {
+					color: $cd-black;
+					//display:none;
+				}
+				a:hover .entry-title {
+					opacity: 0.7;
+				}
+			}
           }
           .article-footer {
             position: absolute;
@@ -767,7 +767,7 @@ POSTS & CONTENT STYLES
         }
       }
 				/*  Photo teaser theming */
-			.post.format-image {
+			.post.format-gallery {
 				.gallery + p {
 					display: none;	
 				}
