@@ -532,7 +532,7 @@ POSTS & CONTENT STYLES
 			}
 		}            /* general post style */
 
-		.format-image {
+		.format-gallery {
 			//display: none;
 			.entry-content {
 				p:nth-child(1),
@@ -605,10 +605,15 @@ POSTS & CONTENT STYLES
 			#content #main {
 				@include zen-grid-item(12,1);
 			}
+      .post.format-video {
+        .teaser-surround {
+          background-color: transparent;
+        }
+      }
 			// General stuff
 			.post {
 				&:first-child {
-					margin-top: 0.5em;
+					//margin-top: 0.5em;
 				}
 				margin: 0.5em 0;//margin: 1em 0;
         width: 100%;
@@ -654,7 +659,7 @@ POSTS & CONTENT STYLES
           }
           // Featured image theming
           .featured-image {
-          	height: 7em; //height: 16em;
+          	height: 10em; //height: 16em;
 						width: 100%;//width: 35%;
 						float: right;
 						background-position: center;
@@ -712,7 +717,7 @@ POSTS & CONTENT STYLES
 			}
 			.post {
 				&:first-child {
-					margin-top: 0.5em;
+					//margin-top: 0.5em;
 				}
 				margin: 0.5em 0;//margin: 1em 0;
         width: 100%;
@@ -728,16 +733,16 @@ POSTS & CONTENT STYLES
           .entry-content {
             padding: 0 1em;
             height: auto;
-						overflow: hidden;
-						header {
-							.entry-title {
-								color: $cd-black;
-								//display:none;
-							}
-							a:hover .entry-title {
-								opacity: 0.7;
-							}
-						}
+      			overflow: hidden;
+      			header {
+				      .entry-title {
+      					color: $cd-black;
+      					//display:none;
+      				}
+      				a:hover .entry-title {
+      					opacity: 0.7;
+      				}
+      			}
           }
           .article-footer {
             position: absolute;
@@ -749,11 +754,11 @@ POSTS & CONTENT STYLES
           // Featured image theming
           .featured-image {
           	height: auto;
-						width:100%;//width: 60%;
-						float: left;
-						background-position: center;
-						background-repeat: no-repeat;
-						background-size: cover;
+    				width:100%;//width: 60%;
+    				float: left;
+    				background-position: center;
+    				background-repeat: no-repeat;
+    				background-size: cover;
           }
           &.has-thumbnail {
 						.entry-content,
@@ -767,68 +772,81 @@ POSTS & CONTENT STYLES
         }
       }
 				/*  Photo teaser theming */
-			.post.format-image {
-				.gallery + p {
-					display: none;	
-				}
-				.gallery > p {
-					display: none;
-				}
-				.gallery dd {
-					margin-bottom: 0.5em;	
-				}
-				.gallery-item:nth-child(n+5) {
-					display: none;
-				}
-				.article-footer {
-					text-align: right;
-				}
-				.teaser-surround {
-					padding-bottom: 2em;
-				}
-				&.no-captions {
-					.gallery-item {
-						.gallery-caption {
-							display: none;
-						}
-					}
-				}
-				.entry-content {
-					p:nth-child(2),
-					p:nth-child(3) {
-						display: none;
-					}
-				}
-			}
-			/* video post theming */
-			.post.format-video {
-
-			// 		//@include zen-nested-container();
-			// 		.featured-image { //Reusing from post teaser
-			// 			//@include zen-grid-item(12,1);
-			// 			&.excerpt-exists {
-			// 				//@include zen-grid-item(8,1);
-			// 			}
-			// 		}
-				.fitvids {
-					p {
-						margin: 0;
-					}
-					&:hover {
-						opacity: 1;
-					}
-				}
-				.entry-content {
-					display: none;
-					.entry-title {
-						font-size: 2.25em;
-						
-					}
-				}
-			// 	}
-			}
-
+			
 		}
+    .category-photos-videos,
+    .category-photos,
+    .category-videos,
+    .category-blog {
+      .post.format-gallery {
+        .gallery + p {
+          display: none;  
+        }
+        .gallery > p {
+          display: none;
+        }
+        .gallery dd {
+          margin-bottom: 0.5em; 
+        }
+        .gallery-item:nth-child(n+5) {
+          display: none;
+        }
+        .article-footer {
+          text-align: right;
+        }
+        .teaser-surround {
+          padding-bottom: 2em;
+          height: auto;
+        }
+        &.no-captions {
+          .gallery-item {
+            .gallery-caption {
+              display: none;
+            }
+          }
+        }
+        .entry-content {
+          p:nth-child(2),
+          p:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+      .post {
+        &.format-gallery {
+          &:first-child {
+            .entry-content {
+              height: auto;
+            }
+          }
+        }
+      }
+      /* video post theming */
+      .post.format-video {
+        .teaser-surround {
+          //background-color: transparent;
+          .featured-image {
+            height: 100%;
+          }
+        }
+        .fitvids {
+          p {
+            margin: 0;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .entry-content {
+          display: none;
+          .entry-title {
+            font-size: 2.25em;
+            
+          }
+        }
+      }
+
+    }
 		
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
