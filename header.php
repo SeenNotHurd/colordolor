@@ -110,7 +110,7 @@
 						} elseif (tribe_is_event() /*|| /*tribe_is_event() || tribe_is_list_view() /*empty($hasPosts)*/) {
 						 	$headerTitle = 'Live Shows';
 						} elseif (is_404()) {
-							$headerTitle = 'Oops! This page doesn\'t exist...;'
+							$headerTitle = 'Oops! This page doesn\'t exist...';
 						}
             echo $headerTitle; 
             ?>
