@@ -3455,45 +3455,46 @@ you can add resource intensive styles.
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    min-height: 1em;
   }
 
-  /* line 71, ../scss/_768up.scss */
+  /* line 72, ../scss/_768up.scss */
   #logo img {
     width: 83%;
   }
-  /* line 80, ../scss/_768up.scss */
+  /* line 81, ../scss/_768up.scss */
   .home #container {
     height: 100%;
   }
-  /* line 82, ../scss/_768up.scss */
+  /* line 83, ../scss/_768up.scss */
   .home #container .header {
     min-height: 100%;
     height: auto;
   }
-  /* line 86, ../scss/_768up.scss */
+  /* line 87, ../scss/_768up.scss */
   .home #container .header #logo {
     z-index: 0;
   }
-  /* line 88, ../scss/_768up.scss */
+  /* line 89, ../scss/_768up.scss */
   .home #container .header #logo img {
     width: 60%;
   }
-  /* line 92, ../scss/_768up.scss */
+  /* line 93, ../scss/_768up.scss */
   .home #container .header .band-photo {
     margin-top: 0;
   }
-  /* line 95, ../scss/_768up.scss */
+  /* line 96, ../scss/_768up.scss */
   .home #container .header .social-header {
     margin-top: 0;
   }
-  /* line 98, ../scss/_768up.scss */
+  /* line 99, ../scss/_768up.scss */
   .home #container .header .featured-video {
     padding-right: 2%;
   }
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 133, ../scss/_768up.scss */
+  /* line 134, ../scss/_768up.scss */
   .nav {
     display: inline-block;
     border-bottom: 1px solid #ccc;
@@ -3504,7 +3505,7 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 144, ../scss/_768up.scss */
+  /* line 145, ../scss/_768up.scss */
   .nav li {
     float: left;
     position: relative;
@@ -3513,7 +3514,7 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 148, ../scss/_768up.scss */
+  /* line 149, ../scss/_768up.scss */
   .nav li a {
     border-bottom: 0;
     padding: 0.5em 1em 0.5em 0;
@@ -3523,19 +3524,19 @@ you can add resource intensive styles.
     has the possibility of being a mobile device.
     */
   }
-  /* line 152, ../scss/_768up.scss */
+  /* line 153, ../scss/_768up.scss */
   .nav li a br {
     display: none;
   }
-  /* line 161, ../scss/_768up.scss */
+  /* line 162, ../scss/_768up.scss */
   .nav li a:hover, .nav li a:focus {
     color: #9f3a5e;
   }
-  /* line 168, ../scss/_768up.scss */
+  /* line 169, ../scss/_768up.scss */
   .nav li:last-child a {
     padding-right: 0;
   }
-  /* line 177, ../scss/_768up.scss */
+  /* line 178, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -3546,7 +3547,7 @@ you can add resource intensive styles.
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 185, ../scss/_768up.scss */
+  /* line 186, ../scss/_768up.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -3555,7 +3556,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 187, ../scss/_768up.scss */
+  /* line 188, ../scss/_768up.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -3564,12 +3565,12 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 204, ../scss/_768up.scss */
+  /* line 205, ../scss/_768up.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 226, ../scss/_768up.scss */
+  /* line 227, ../scss/_768up.scss */
   .nav li:hover ul {
     top: auto;
     display: block;
@@ -3579,14 +3580,14 @@ you can add resource intensive styles.
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  /* line 248, ../scss/_768up.scss */
+  /* line 249, ../scss/_768up.scss */
   #content {
     padding: 2em 0;
     /*#inner-content {
     	font-size: 1em;
     } */
   }
-  /* line 253, ../scss/_768up.scss */
+  /* line 254, ../scss/_768up.scss */
   #content #main {
     float: left;
     width: 66.66667%;
@@ -3601,93 +3602,93 @@ you can add resource intensive styles.
     word-wrap: break-word;
   }
 
-  /* line 258, ../scss/_768up.scss */
+  /* line 259, ../scss/_768up.scss */
   .category-blog {
     /* First cat blog page layout */
     /* first post as below: */
   }
-  /* line 261, ../scss/_768up.scss */
+  /* line 262, ../scss/_768up.scss */
   .category-blog .post {
     width: 49.7%;
     padding: 0 1em;
     height: 16em;
     margin: 1em 0;
   }
-  /* line 266, ../scss/_768up.scss */
+  /* line 267, ../scss/_768up.scss */
   .category-blog .post .teaser-surround {
     height: 16em;
   }
-  /* line 268, ../scss/_768up.scss */
+  /* line 269, ../scss/_768up.scss */
   .category-blog .post .teaser-surround .entry-content {
     height: 13.5em;
   }
-  /* line 271, ../scss/_768up.scss */
+  /* line 272, ../scss/_768up.scss */
   .category-blog .post .teaser-surround .featured-image {
     height: 7em;
   }
-  /* line 275, ../scss/_768up.scss */
+  /* line 276, ../scss/_768up.scss */
   .category-blog .post .teaser-surround.has-thumbnail .entry-content {
     height: 7.9em;
   }
-  /* line 280, ../scss/_768up.scss */
+  /* line 281, ../scss/_768up.scss */
   .category-blog .post:first-child {
     width: 100%;
     height: auto;
   }
-  /* line 283, ../scss/_768up.scss */
+  /* line 284, ../scss/_768up.scss */
   .category-blog .post:first-child .teaser-surround {
     height: 16em;
     /* featured image theming */
   }
-  /* line 285, ../scss/_768up.scss */
+  /* line 286, ../scss/_768up.scss */
   .category-blog .post:first-child .teaser-surround .entry-content {
     height: 13.95em;
   }
-  /* line 289, ../scss/_768up.scss */
+  /* line 290, ../scss/_768up.scss */
   .category-blog .post:first-child .teaser-surround .featured-image {
     height: 16em;
     width: 60%;
     float: left;
   }
-  /* line 295, ../scss/_768up.scss */
+  /* line 296, ../scss/_768up.scss */
   .category-blog .post:first-child .teaser-surround.has-thumbnail .entry-content {
     width: 40%;
     height: 14.45em;
   }
-  /* line 299, ../scss/_768up.scss */
+  /* line 300, ../scss/_768up.scss */
   .category-blog .post:first-child .teaser-surround.has-thumbnail .article-footer {
     width: 100%;
   }
-  /* line 309, ../scss/_768up.scss */
+  /* line 310, ../scss/_768up.scss */
   .category-blog .post.format-gallery:first-child .entry-content {
     height: auto;
   }
-  /* line 312, ../scss/_768up.scss */
+  /* line 313, ../scss/_768up.scss */
   .category-blog .post.format-gallery:first-child .teaser-surround {
     height: auto;
   }
 
-  /* line 322, ../scss/_768up.scss */
+  /* line 323, ../scss/_768up.scss */
   .category-photos-videos .post,
   .category-photos .post,
   .category-videos .post {
     margin: 1em 0;
     padding: 0 1em;
   }
-  /* line 325, ../scss/_768up.scss */
+  /* line 326, ../scss/_768up.scss */
   .category-photos-videos .post:first-child,
   .category-photos .post:first-child,
   .category-videos .post:first-child {
     margin-top: 0.5em;
   }
-  /* line 332, ../scss/_768up.scss */
+  /* line 333, ../scss/_768up.scss */
   .category-photos-videos .post .teaser-surround .featured-image,
   .category-photos .post .teaser-surround .featured-image,
   .category-videos .post .teaser-surround .featured-image {
     height: auto;
     width: 60%;
   }
-  /* line 338, ../scss/_768up.scss */
+  /* line 339, ../scss/_768up.scss */
   .category-photos-videos .post .teaser-surround.has-thumbnail .entry-content,
   .category-photos-videos .post .teaser-surround.has-thumbnail .article-footer,
   .category-photos .post .teaser-surround.has-thumbnail .entry-content,
@@ -3696,13 +3697,13 @@ you can add resource intensive styles.
   .category-videos .post .teaser-surround.has-thumbnail .article-footer {
     width: 40%;
   }
-  /* line 347, ../scss/_768up.scss */
+  /* line 348, ../scss/_768up.scss */
   .category-photos-videos .post.format-video .entry-content,
   .category-photos .post.format-video .entry-content,
   .category-videos .post.format-video .entry-content {
     display: inline-block;
   }
-  /* line 355, ../scss/_768up.scss */
+  /* line 356, ../scss/_768up.scss */
   .category-photos-videos .format-gallery .entry-content p:nth-child(2),
   .category-photos-videos .format-gallery .entry-content p:nth-child(3),
   .category-photos .format-gallery .entry-content p:nth-child(2),
@@ -3715,7 +3716,7 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 366, ../scss/_768up.scss */
+  /* line 367, ../scss/_768up.scss */
   .sidebar {
     clear: none;
     float: left;
@@ -3730,7 +3731,7 @@ you can add resource intensive styles.
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 371, ../scss/_768up.scss */
+  /* line 372, ../scss/_768up.scss */
   .sidebar .widget:nth-child(2n+1) {
     float: left;
     width: 100%;
@@ -3746,7 +3747,7 @@ you can add resource intensive styles.
     clear: none;
     float: none;
   }
-  /* line 376, ../scss/_768up.scss */
+  /* line 377, ../scss/_768up.scss */
   .sidebar .widget:nth-child(2n+2) {
     float: left;
     width: 100%;
@@ -3763,27 +3764,27 @@ you can add resource intensive styles.
     float: none;
   }
 
-  /* line 384, ../scss/_768up.scss */
+  /* line 385, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 389, ../scss/_768up.scss */
+  /* line 390, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 392, ../scss/_768up.scss */
+  /* line 393, ../scss/_768up.scss */
   .widget:first-child {
     margin-top: 0;
   }
-  /* line 397, ../scss/_768up.scss */
+  /* line 398, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 405, ../scss/_768up.scss */
+  /* line 406, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -3803,18 +3804,18 @@ you can add resource intensive styles.
   /******************************************************************
   GENERIC FORM STYLES
   ******************************************************************/
-  /* line 507, ../scss/_768up.scss */
+  /* line 508, ../scss/_768up.scss */
   form.fm-form label {
     font-weight: 700;
   }
-  /* line 511, ../scss/_768up.scss */
+  /* line 512, ../scss/_768up.scss */
   form.fm-form input[type="text"],
   form.fm-form input[type="textarea"] {
     background-color: #fff;
     border: 1px solid #4c4c4c;
     padding: 0.5em;
   }
-  /* line 516, ../scss/_768up.scss */
+  /* line 517, ../scss/_768up.scss */
   form.fm-form input[type="submit"] {
     background-color: #9f3a5e;
     padding: 0.5em;
@@ -3836,7 +3837,7 @@ you can add resource intensive styles.
     -transition: all 0.3s;
     transition: all 0.3s;
   }
-  /* line 530, ../scss/_768up.scss */
+  /* line 531, ../scss/_768up.scss */
   form.fm-form input[type="submit"]:active, form.fm-form input[type="submit"]:hover, form.fm-form input[type="submit"]:focus {
     background-color: #bd4a73;
     -webkit-transition: all 0.1s;
@@ -3849,11 +3850,11 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
-  /* line 543, ../scss/_768up.scss */
+  /* line 544, ../scss/_768up.scss */
   .footer #inner-footer {
     font-size: 0.8em;
   }
-  /* line 545, ../scss/_768up.scss */
+  /* line 546, ../scss/_768up.scss */
   .footer #inner-footer .logo {
     float: left;
     width: 16.66667%;
@@ -3867,7 +3868,7 @@ you can add resource intensive styles.
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 548, ../scss/_768up.scss */
+  /* line 549, ../scss/_768up.scss */
   .footer #inner-footer .contact {
     float: left;
     width: 25%;
@@ -3881,7 +3882,7 @@ you can add resource intensive styles.
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 551, ../scss/_768up.scss */
+  /* line 552, ../scss/_768up.scss */
   .footer #inner-footer .social {
     clear: none;
     float: left;
@@ -3896,7 +3897,7 @@ you can add resource intensive styles.
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 555, ../scss/_768up.scss */
+  /* line 556, ../scss/_768up.scss */
   .footer #inner-footer .album {
     clear: none;
     float: left;
@@ -3916,7 +3917,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 579, ../scss/_768up.scss */
+  /* line 580, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
@@ -3928,47 +3929,47 @@ you can add resource intensive styles.
   /* end .footer-links */
 }
 @media only screen and (min-width: 768px) and (min-width: 900px) {
-  /* line 71, ../scss/_768up.scss */
+  /* line 72, ../scss/_768up.scss */
   #logo img {
     width: 99%;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 800px) {
-  /* line 104, ../scss/_768up.scss */
+  /* line 105, ../scss/_768up.scss */
   .home .header .band-photo {
     margin-top: 3%;
   }
 }
 @media only screen and (min-width: 768px) and (min-height: 600px) and (orientation: landscape) {
-  /* line 110, ../scss/_768up.scss */
+  /* line 111, ../scss/_768up.scss */
   .home .header #inner-header {
     min-height: 600px;
   }
-  /* line 113, ../scss/_768up.scss */
+  /* line 114, ../scss/_768up.scss */
   .home .header .featured-video {
     margin-top: 13%;
   }
 }
 @media only screen and (min-width: 768px) and (min-height: 768px) and (orientation: landscape) {
-  /* line 119, ../scss/_768up.scss */
+  /* line 120, ../scss/_768up.scss */
   .home .header #inner-header {
     min-height: 768px;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 900px) {
-  /* line 133, ../scss/_768up.scss */
+  /* line 134, ../scss/_768up.scss */
   .nav {
     font-size: 0.8em;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 900px) {
-  /* line 543, ../scss/_768up.scss */
+  /* line 544, ../scss/_768up.scss */
   .footer #inner-footer {
     font-size: 0.9em;
   }
-  /* line 561, ../scss/_768up.scss */
+  /* line 562, ../scss/_768up.scss */
   .footer #inner-footer .social {
     clear: none;
     float: left;
@@ -3983,7 +3984,7 @@ you can add resource intensive styles.
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 565, ../scss/_768up.scss */
+  /* line 566, ../scss/_768up.scss */
   .footer #inner-footer .album {
     clear: none;
     float: left;
